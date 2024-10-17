@@ -1,5 +1,6 @@
 <script setup>
   import { ref, reactive } from 'vue'
+  import ExempleComputed from './components/ExempleComputed.vue'
 
   // v-on / @
   const num = ref(0)
@@ -51,7 +52,7 @@
       <h2>v-on / @</h2>
       <p>Nom: {{ usuari.nom }}</p>
       <p>Edat: {{ usuari.edat }}</p>
-      <button @click="incrementarEdat">Incrementar</button>
+      <button @click="incrementarEdat">Incrementar l'edat</button>
     </div>
 
     <div>
@@ -81,8 +82,11 @@
 
     <div>
       <h2>v-show</h2>
-      <button @click="mostrar =! mostrar">Mostra el text</button>
+      <button @click="mostrar =! mostrar">Alternar visibilitat</button>
       <p v-show="mostrar">Aquest és el text que es mostra o s'amaga</p>
+    </div>
+    <div>
+      <ExempleComputed/>
     </div>
   </body>
 </template>
